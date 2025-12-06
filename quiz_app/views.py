@@ -37,7 +37,7 @@ def update_quiz(request,quiz_id):
 def delete_quiz(request,quiz_id):
     quiz = get_object_or_404(Quiz,id=quiz_id)
     quiz.delete()
-    return Response({'message':f"The {quiz_id} is deleted successfully"},status=status.HTTP_204_NO_CONTENT)
+    return Response({'message':f"The Quiz with ID {quiz_id} is deleted successfully"},status=status.HTTP_204_NO_CONTENT)
 
 @api_view (['GET'])
 def search_quiz(request):
